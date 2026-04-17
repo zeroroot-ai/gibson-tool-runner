@@ -30,7 +30,9 @@ import (
 
 	// Blank-import every parser package so its init() registers with the
 	// central parser registry. The list grows as parsers land.
+	_ "github.com/zero-day-ai/gibson-tool-runner/parsers/httpx"
 	_ "github.com/zero-day-ai/gibson-tool-runner/parsers/nmap"
+	_ "github.com/zero-day-ai/gibson-tool-runner/parsers/nuclei"
 )
 
 const (
