@@ -2,9 +2,11 @@ module github.com/zero-day-ai/gibson-tool-runner
 
 go 1.25.0
 
+toolchain go1.25.5
+
 require (
 	github.com/Ullaakut/nmap/v3 v3.1.0
-	github.com/zero-day-ai/sdk v0.90.0
+	github.com/zero-day-ai/sdk v0.103.1
 	google.golang.org/protobuf v1.36.11
 )
 
