@@ -1,5 +1,7 @@
 # gibson-tool-runner
 
+> **Workflow rules:** see [`zero-day-ai/.github` → `AGENTS.md`](https://github.com/zero-day-ai/.github/blob/main/AGENTS.md) for branch / PR / commit / release / rebase rules.
+
 One microVM image. One Go binary. N parsers for CLI security + ops tools.
 
 The Gibson daemon dispatches every sandboxed tool call into a Setec microVM
