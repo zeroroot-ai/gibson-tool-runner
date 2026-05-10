@@ -6,11 +6,12 @@ toolchain go1.25.5
 
 require (
 	github.com/Ullaakut/nmap/v3 v3.1.0
-	github.com/zero-day-ai/sdk v1.3.1
+	github.com/zero-day-ai/sdk v1.7.3
 	google.golang.org/protobuf v1.36.11
 )
 
 require (
+	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.11-20260415201107-50325440f8f2.1 // indirect
 	cloud.google.com/go/compute/metadata v0.9.0 // indirect
 	github.com/Microsoft/go-winio v0.6.2 // indirect
 	github.com/go-jose/go-jose/v4 v4.1.4 // indirect
