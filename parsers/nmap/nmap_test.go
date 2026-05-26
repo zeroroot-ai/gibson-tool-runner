@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/zero-day-ai/gibson-tool-runner/internal/registry"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
 )
 
 // TestParseXML_SimpleScan feeds a recorded nmap -sV -oX - output through the

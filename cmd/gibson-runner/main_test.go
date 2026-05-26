@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
-	componentpb "github.com/zero-day-ai/sdk/api/gen/gibson/component/v1"
+	componentpb "github.com/zeroroot-ai/sdk/api/gen/gibson/component/v1"
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/zero-day-ai/gibson-tool-runner/internal/registry"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
 )
 
 // TestDecodeInputJSON_Fields asserts that decodeInputJSON correctly maps the

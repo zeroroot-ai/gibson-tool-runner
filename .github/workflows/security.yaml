@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      GOPRIVATE: github.com/zero-day-ai
+      GOPRIVATE: github.com/zeroroot-ai
     steps:
       - uses: actions/checkout@v6
 

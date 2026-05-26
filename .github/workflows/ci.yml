@@ -11,7 +11,7 @@ jobs:
     name: test
     runs-on: ubuntu-24.04
     env:
-      GOPRIVATE: github.com/zero-day-ai
+      GOPRIVATE: github.com/zeroroot-ai
     steps:
       - uses: actions/checkout@v6
 

@@ -22,7 +22,7 @@ jobs:
       contents: read
       security-events: write
     env:
-      GOPRIVATE: github.com/zero-day-ai
+      GOPRIVATE: github.com/zeroroot-ai
     steps:
       - uses: actions/checkout@v6
 

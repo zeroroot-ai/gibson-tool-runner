@@ -1,4 +1,4 @@
-# how-to-add-an-auth-call.md — `zero-day-ai/gibson-tool-runner`
+# how-to-add-an-auth-call.md — `zeroroot-ai/gibson-tool-runner`
 
 The tool runner does not own RPCs — it consumes
 `gibson.component.v1.ComponentService` from the daemon. "Adding an

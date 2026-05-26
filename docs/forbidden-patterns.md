@@ -1,4 +1,4 @@
-# forbidden-patterns.md — `zero-day-ai/gibson-tool-runner`
+# forbidden-patterns.md — `zeroroot-ai/gibson-tool-runner`
 
 Companion to [`rules.yaml`](./rules.yaml). Wrong vs right code shapes
 for the tool runner. Spec: `unified-identity-and-authorization`.
@@ -62,17 +62,17 @@ Wrong:
 
 ```go
 // internal/poller/loop.go
-import "github.com/zero-day-ai/gibson/internal/component"   // forbidden
+import "github.com/zeroroot-ai/gibson/internal/component"   // forbidden
 ```
 
 Right — proto types come from the SDK:
 
 ```go
-import componentpb "github.com/zero-day-ai/sdk/api/gen/gibson/component/v1"
+import componentpb "github.com/zeroroot-ai/sdk/api/gen/gibson/component/v1"
 ```
 
 If a type genuinely lives only in the daemon, it belongs in the SDK
-instead. Open a PR against `zero-day-ai/sdk`, tag a release, bump this
+instead. Open a PR against `zeroroot-ai/sdk`, tag a release, bump this
 module's pin.
 
 ## TOOL-RUNNER-AUTH-004: bypassing `auth.ConnectDaemon`

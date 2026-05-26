@@ -17,7 +17,7 @@ jobs:
     name: publish tool catalog as OCI artifact
     runs-on: ubuntu-24.04
     env:
-      GOPRIVATE: github.com/zero-day-ai
+      GOPRIVATE: github.com/zeroroot-ai
     steps:
       - uses: actions/checkout@v6
 
@@ -42,7 +42,7 @@ jobs:
           echo "major=${MAJOR}" >> "$GITHUB_OUTPUT"
 
       - name: log in to GHCR
-        uses: zero-day-ai/.github/.github/actions/ghcr-login@main
+        uses: zeroroot-ai/.github/.github/actions/ghcr-login@main
         with:
           password: ${{ secrets.GITHUB_TOKEN }}
 
@@ -60,7 +60,7 @@ jobs:
           curl -fsSL -o /tmp/oras.tar.gz "https://github.com/oras-project/oras/releases/download/v${ORAS_VERSION}/oras_${ORAS_VERSION}_linux_amd64.tar.gz"
           tar -xzf /tmp/oras.tar.gz -C /usr/local/bin oras
           oras push \
-              "ghcr.io/zero-day-ai/gibson-tool-runner-catalog:${{ steps.tags.outputs.semver }}" \
+              "ghcr.io/zeroroot-ai/gibson-tool-runner-catalog:${{ steps.tags.outputs.semver }}" \
               --artifact-type application/vnd.gibson.tool-runner.catalog.v1+json \
               /tmp/catalog.json:application/json
 

@@ -14,8 +14,8 @@
 package nuclei
 
 import (
-	"github.com/zero-day-ai/gibson-tool-runner/internal/policy"
-	"github.com/zero-day-ai/gibson-tool-runner/internal/registry"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/policy"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
 )
 
 var argsPolicy = policy.ArgsPolicy{

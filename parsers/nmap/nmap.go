@@ -14,11 +14,11 @@ import (
 	"os/exec"
 
 	nmaplib "github.com/Ullaakut/nmap/v3"
-	graphragpb "github.com/zero-day-ai/sdk/api/gen/gibson/graphrag/v1"
+	graphragpb "github.com/zeroroot-ai/sdk/api/gen/gibson/graphrag/v1"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/zero-day-ai/gibson-tool-runner/internal/registry"
-	"github.com/zero-day-ai/gibson-tool-runner/internal/sandbox"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/sandbox"
 )
 
 const (
