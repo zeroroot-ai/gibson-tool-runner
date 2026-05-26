@@ -1,5 +1,5 @@
 # Shared golangci-lint v2 baseline — adopted from
-# zero-day-ai/.github/templates/golangci-base.yml (slice 2.2, gibson#172).
+# zeroroot-ai/.github/templates/golangci-base.yml (slice 2.2, gibson#172).
 # Linter set lives in the base; per-repo section below is the only place
 # to add repo-specific exclusions.
 

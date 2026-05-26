@@ -3,8 +3,8 @@ package masscan
 import (
 	"testing"
 
-	"github.com/zero-day-ai/gibson-tool-runner/internal/policy"
-	"github.com/zero-day-ai/gibson-tool-runner/internal/registry"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/policy"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
 )
 
 // TestPolicy_DropsOutputFile asserts the canonical injection

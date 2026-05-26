@@ -5,11 +5,11 @@
 # apt/curl/go-install line here + a parser file in ./parsers/.
 #
 # Build:
-#   docker build -t ghcr.io/zero-day-ai/gibson-tool-runner:<tag> .
+#   docker build -t ghcr.io/zeroroot-ai/gibson-tool-runner:<tag> .
 #
 # Run (smoke):
 #   docker run --rm -e GIBSON_TOOL_INPUT_B64=... -e GIBSON_TOOL_NAME=nmap \
-#     ghcr.io/zero-day-ai/gibson-tool-runner:<tag>
+#     ghcr.io/zeroroot-ai/gibson-tool-runner:<tag>
 
 # Pin the runtime base by digest in production releases. :trixie-slim is
 # fine for dev iteration; CI overrides via --build-arg BASE=debian@sha256:...
@@ -23,12 +23,12 @@ FROM golang:1.26-bookworm AS build
 
 WORKDIR /src
 
-# github.com/zero-day-ai/platform-clients is a private module. `ghtoken` is
+# github.com/zeroroot-ai/platform-clients is a private module. `ghtoken` is
 # the BuildKit secret id (mounted read-only at /run/secrets/ghtoken by the
 # reusable image-build workflow). When not provided (local dev without the
 # secret) the `git config` step is skipped so offline builds still compile
 # against cached modules.
-ENV GOPRIVATE=github.com/zero-day-ai
+ENV GOPRIVATE=github.com/zeroroot-ai
 
 # Dependencies first for layer caching.
 COPY go.mod go.sum ./

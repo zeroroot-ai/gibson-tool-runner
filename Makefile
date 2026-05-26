@@ -14,14 +14,14 @@ SHELL := /usr/bin/env bash
 .SHELLFLAGS := -eo pipefail -c
 
 BIN_DIR := bin
-IMAGE   ?= ghcr.io/zero-day-ai/gibson-tool-runner:dev
+IMAGE   ?= ghcr.io/zeroroot-ai/gibson-tool-runner:dev
 
 .PHONY: help
 help: ## List targets.
 	@awk 'BEGIN {FS = ":.*##"; printf "Targets:\n"} /^[a-zA-Z_0-9-]+:.*?##/ { printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2 }' $(MAKEFILE_LIST)
 
 # build: org Makefile contract target (gibson#171 slice 1.4 /
-# zero-day-ai/.github#87). Aliases bin so CI and the drift-detector
+# zeroroot-ai/.github#87). Aliases bin so CI and the drift-detector
 # find a canonical build target.
 .PHONY: build
 build: bin ## Build the runner binary (org-contract alias for bin).
@@ -49,7 +49,7 @@ lint: ## Run go vet (staticcheck if installed).
 	@if command -v staticcheck >/dev/null; then staticcheck ./... ; else echo "staticcheck not installed; skipping"; fi
 
 # check: org Makefile contract CI-equivalent gate (gibson#171 slice 1.4 /
-# zero-day-ai/.github#87). Runs lint + test, matching what CI runs on
+# zeroroot-ai/.github#87). Runs lint + test, matching what CI runs on
 # every PR.
 .PHONY: check
 check: lint test ## Run the full CI gate locally (lint + test).

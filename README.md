@@ -1,6 +1,6 @@
 # gibson-tool-runner
 
-> **Workflow rules:** see [`zero-day-ai/.github` → `AGENTS.md`](https://github.com/zero-day-ai/.github/blob/main/AGENTS.md) for branch / PR / commit / release / rebase rules.
+> **Workflow rules:** see [`zeroroot-ai/.github` → `AGENTS.md`](https://github.com/zeroroot-ai/.github/blob/main/AGENTS.md) for branch / PR / commit / release / rebase rules.
 
 One microVM image. One Go binary. N parsers for CLI security + ops tools.
 
@@ -15,7 +15,7 @@ standard tool-runner ABI.
 Early scaffold. v0.1.0 will ship the first three parsers (nmap, httpx,
 nuclei). The daemon-side catalog refresher + removal of the Helm
 `sandbox.tools.*` block lands as part of the `gibson-tool-runner` spec in
-the main zero-day-ai repo.
+the main zeroroot-ai repo.
 
 ## Tool-runner ABI
 

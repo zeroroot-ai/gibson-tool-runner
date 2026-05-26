@@ -1,4 +1,4 @@
-# auth.md — `zero-day-ai/gibson-tool-runner`
+# auth.md — `zeroroot-ai/gibson-tool-runner`
 
 Auth model from the tool runner's perspective. AI-agent-facing.
 Spec: `unified-identity-and-authorization` Requirements 12.1–12.3.
@@ -29,7 +29,7 @@ The tool runner takes three required env vars and one optional one:
 |---|---|
 | `ZITADEL_TOOL_RUNNER_CLIENT_ID` | Zitadel service-account client_id (Helm Secret `gibson-zitadel-tool-runner`). |
 | `ZITADEL_TOOL_RUNNER_CLIENT_SECRET` | Zitadel service-account client_secret. |
-| `ZITADEL_ISSUER` | Zitadel base URL, e.g. `https://auth.zero-day.ai`. Token URL is derived as `<ZITADEL_ISSUER>/oauth/v2/token`. |
+| `ZITADEL_ISSUER` | Zitadel base URL, e.g. `https://auth.zeroroot.ai`. Token URL is derived as `<ZITADEL_ISSUER>/oauth/v2/token`. |
 | `GIBSON_DAEMON_ADDRESS` | gRPC address of the Envoy front-door. Defaults to `localhost:50002` when running as a sidecar; real deployments set the Envoy public URL. **Note: this env var name is preserved here for historical compatibility with the daemon-client SDK helper; it points to Envoy, not to the daemon directly.** |
 
 [`auth.go:setOIDCEnvVars`](../internal/auth/auth.go) translates the

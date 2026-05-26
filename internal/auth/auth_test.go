@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/zero-day-ai/sdk/daemonclient"
+	"github.com/zeroroot-ai/sdk/daemonclient"
 )
 
 func TestSetOIDCEnvVars_AllPresent(t *testing.T) {

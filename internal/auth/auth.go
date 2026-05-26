@@ -4,7 +4,7 @@
 // must present both a Zitadel service-account JWT and (when running in Kubernetes)
 // a SPIFFE X.509 SVID for mTLS.  This package translates the tool-runner-specific
 // environment variables into the SDK's generic OIDC credential env vars, then
-// delegates connection establishment to [github.com/zero-day-ai/sdk/daemonclient].
+// delegates connection establishment to [github.com/zeroroot-ai/sdk/daemonclient].
 //
 // Environment variables consumed by this package:
 //
@@ -33,7 +33,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/zero-day-ai/sdk/daemonclient"
+	"github.com/zeroroot-ai/sdk/daemonclient"
 )
 
 // Env var names specific to the tool runner.

@@ -1,4 +1,4 @@
-# rules.yaml — zero-day-ai/gibson-tool-runner
+# rules.yaml — zeroroot-ai/gibson-tool-runner
 #
 # Spec: unified-identity-and-authorization Phase J task 10.1.
 # Schema: ../../../core/sdk/docs/rules-schema.yaml v1.0.0.
@@ -57,7 +57,7 @@ rules:
   - id: tool-runner-auth-003
     description: |
       The tool runner must NOT import the daemon module
-      (github.com/zero-day-ai/gibson). It depends on the SDK only —
+      (github.com/zeroroot-ai/gibson). It depends on the SDK only —
       proto types, daemonclient, capabilitygrant. Importing the daemon
       would re-create the cyclic boundary the polyrepo avoids.
     scope:
@@ -66,10 +66,10 @@ rules:
     pattern:
       kind: forbidden_import
       target:
-        - "github.com/zero-day-ai/gibson"
+        - "github.com/zeroroot-ai/gibson"
     severity: error
     message: |
-      Import what you need from github.com/zero-day-ai/sdk. If a type
+      Import what you need from github.com/zeroroot-ai/sdk. If a type
       lives only in the daemon, open a PR moving it into the SDK first.
     enforced_by:
       - "manual"

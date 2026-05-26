@@ -37,25 +37,25 @@ import (
 	"syscall"
 	"time"
 
-	componentpb "github.com/zero-day-ai/sdk/api/gen/gibson/component/v1"
-	graphragpb "github.com/zero-day-ai/sdk/api/gen/gibson/graphrag/v1"
+	componentpb "github.com/zeroroot-ai/sdk/api/gen/gibson/component/v1"
+	graphragpb "github.com/zeroroot-ai/sdk/api/gen/gibson/graphrag/v1"
 	"google.golang.org/protobuf/encoding/protojson"
 
-	"github.com/zero-day-ai/gibson-tool-runner/internal/probes"
-	"github.com/zero-day-ai/gibson-tool-runner/internal/registry"
-	"github.com/zero-day-ai/platform-clients/observability"
-	"github.com/zero-day-ai/platform-clients/readiness"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/probes"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
+	"github.com/zeroroot-ai/platform-clients/observability"
+	"github.com/zeroroot-ai/platform-clients/readiness"
 
 	// Blank-import every parser package so its init() registers with the
 	// central parser registry. The list grows as parsers land.
-	_ "github.com/zero-day-ai/gibson-tool-runner/parsers/amass"
-	_ "github.com/zero-day-ai/gibson-tool-runner/parsers/dnsx"
-	_ "github.com/zero-day-ai/gibson-tool-runner/parsers/httpx"
-	_ "github.com/zero-day-ai/gibson-tool-runner/parsers/masscan"
-	_ "github.com/zero-day-ai/gibson-tool-runner/parsers/naabu"
-	_ "github.com/zero-day-ai/gibson-tool-runner/parsers/nmap"
-	_ "github.com/zero-day-ai/gibson-tool-runner/parsers/nuclei"
-	_ "github.com/zero-day-ai/gibson-tool-runner/parsers/subfinder"
+	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/amass"
+	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/dnsx"
+	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/httpx"
+	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/masscan"
+	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/naabu"
+	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/nmap"
+	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/nuclei"
+	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/subfinder"
 )
 
 const (

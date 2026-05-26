@@ -1,6 +1,6 @@
 name: image
 
-# Builds + pushes ghcr.io/zero-day-ai/gibson-tool-runner to GHCR.
+# Builds + pushes ghcr.io/zeroroot-ai/gibson-tool-runner to GHCR.
 # Adopts the org reusable image-build workflow (slice 1.2, .github#47).
 #
 # The catalog OCI artifact (--list-tools) is published separately by release.yml.
@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   build:
-    uses: zero-day-ai/.github/.github/workflows/reusable-image-build.yml@main
+    uses: zeroroot-ai/.github/.github/workflows/reusable-image-build.yml@main
     permissions:
       contents: write
       packages: write
@@ -32,5 +32,5 @@ jobs:
       component_name: gibson-tool-runner
       component_path: .
       dockerfile_path: Dockerfile
-      image_name: ghcr.io/zero-day-ai/gibson-tool-runner
+      image_name: ghcr.io/zeroroot-ai/gibson-tool-runner
       tag_pattern: v(.*)

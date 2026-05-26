@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/zero-day-ai/gibson-tool-runner/internal/sandbox"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/sandbox"
 )
 
 // TestLimitReader_UnderCap verifies that reads below the cap succeed normally.
