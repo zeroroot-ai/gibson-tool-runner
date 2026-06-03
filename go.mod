@@ -1,6 +1,6 @@
 module github.com/zeroroot-ai/gibson-tool-runner
 
-go 1.25.10
+go 1.25.11
 
 require (
 	github.com/Ullaakut/nmap/v3 v3.1.0
