@@ -15,6 +15,7 @@ SHELL := /usr/bin/env bash
 
 BIN_DIR := bin
 IMAGE   ?= ghcr.io/zeroroot-ai/gibson-tool-runner:dev
+BRIDGE_IMAGE ?= ghcr.io/zeroroot-ai/gibson-mcp-bridge-runner:dev
 
 .PHONY: help
 help: ## List targets.
@@ -29,6 +30,10 @@ build: bin ## Build the runner binary (org-contract alias for bin).
 .PHONY: bin
 bin: ## Build ./bin/gibson-runner (CGO disabled, static).
 	CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o $(BIN_DIR)/gibson-runner ./cmd/gibson-runner
+
+.PHONY: bridge-bin
+bridge-bin: ## Build ./bin/mcp-bridge-runner (CGO disabled, static).
+	CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o $(BIN_DIR)/mcp-bridge-runner ./cmd/mcp-bridge-runner
 
 .PHONY: test
 test: ## Run unit tests with the race detector.
@@ -57,6 +62,10 @@ check: lint test ## Run the full CI gate locally (lint + test).
 .PHONY: image
 image: ## Build the runner OCI image.
 	docker build -t $(IMAGE) .
+
+.PHONY: bridge-image
+bridge-image: ## Build the MCP-bridge runner OCI image.
+	docker build -f Dockerfile.mcp-bridge -t $(BRIDGE_IMAGE) .
 
 .PHONY: clean
 clean: ## Remove build artifacts.
