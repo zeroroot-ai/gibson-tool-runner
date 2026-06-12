@@ -25,7 +25,7 @@ func TestManifestPath_B64_WritesFile(t *testing.T) {
 	if err != nil {
 		t.Fatalf("ManifestPath: %v", err)
 	}
-	if want := filepath.Join(dir, "connector.yaml"); path != want {
+	if want := filepath.Join(dir, "plugin.yaml"); path != want {
 		t.Fatalf("path = %q, want %q", path, want)
 	}
 	got, err := os.ReadFile(path)
