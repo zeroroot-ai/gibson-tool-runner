@@ -23,11 +23,11 @@ FROM golang:1.26-bookworm AS build
 
 WORKDIR /src
 
-# github.com/zeroroot-ai/platform-clients is a private module. `ghtoken` is
-# the BuildKit secret id (mounted read-only at /run/secrets/ghtoken by the
-# reusable image-build workflow). When not provided (local dev without the
-# secret) the `git config` step is skipped so offline builds still compile
-# against cached modules.
+# This image depends only on the public, Apache-licensed `github.com/zeroroot-ai/sdk`
+# module plus community libraries, so no private-module auth is required. The
+# `ghtoken` BuildKit secret (mounted read-only at /run/secrets/ghtoken by the
+# reusable image-build workflow) is honoured if present for forward
+# compatibility, but offline builds against cached modules work without it.
 ENV GOPRIVATE=github.com/zeroroot-ai
 
 # Dependencies first for layer caching.

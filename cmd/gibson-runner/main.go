@@ -1,3 +1,17 @@
+// Copyright 2026 zero-day.ai
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 // Command gibson-runner is the entry point executed inside a Setec microVM to
 // dispatch a single Gibson tool call, or (with --list-tools) emit the JSON
 // catalog of every parser compiled into this binary.
@@ -41,10 +55,10 @@ import (
 	graphragpb "github.com/zeroroot-ai/sdk/api/gen/gibson/graphrag/v1"
 	"google.golang.org/protobuf/encoding/protojson"
 
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/probes"
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
 	"github.com/zeroroot-ai/gibson-tool-runner/internal/observability"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/probes"
 	"github.com/zeroroot-ai/gibson-tool-runner/internal/readiness"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
 
 	// Blank-import every parser package so its init() registers with the
 	// central parser registry. The list grows as parsers land.
@@ -70,10 +84,10 @@ const (
 	// serviceName is the OTel service.name attribute for this binary.
 	serviceName = "gibson-tool-runner"
 
-	exitOK              = 0
-	exitInputParse      = 1
-	exitExecuteError    = 2
-	exitOutputMarshal   = 3
+	exitOK                = 0
+	exitInputParse        = 1
+	exitExecuteError      = 2
+	exitOutputMarshal     = 3
 	exitToolNotRegistered = 4
 )
 

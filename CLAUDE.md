@@ -12,7 +12,7 @@ One microVM image, one Go binary, N parsers for CLI security and ops tools. The 
 
 The binary reads a typed proto request from `GIBSON_TOOL_INPUT_B64` (base64 of a protojson-serialised request), dispatches to the matching `registry.Parser`, shells out to the installed CLI, and emits the response on stdout as `===GIBSON_TOOL_OUTPUT===<base64(protojson(response))>` (exit 0) or `===GIBSON_TOOL_ERROR===<message>` (exit 2). Parsers live under `parsers/<tool>/`; each registers via an `init()` call imported by `cmd/gibson-runner/main.go`.
 
-Each parser translates raw CLI output into `gibson.graphrag.DiscoveryResult` nodes — the taxonomy-aligned graph objects the daemon writes to Neo4j. Consumes `platform-clients` for observability and transport (ADR-0026).
+Each parser translates raw CLI output into `gibson.graphrag.DiscoveryResult` nodes — the taxonomy-aligned graph objects the daemon writes to Neo4j. This is the Apache-licensed open execution layer (ADR-0054): it depends only on the public OSS `sdk` plus community libraries (connectrpc/otel) and must **not** import `platform-clients`, `gibson`, or any ELv2/closed module. The transport/observability/readiness primitives it once consumed from `platform-clients` now live in-repo under `internal/` (severed per #98).
 
 Full ABI contract: `TOOLS.md`. Security model: `SECURITY.md`.
 
@@ -26,7 +26,7 @@ make list-tools     # run bin/gibson-runner --list-tools
 
 ## Gotchas
 
-- **`platform-clients` version.** This repo pin may lag behind other internal services. Check `go.mod` before adding new `platform-clients` features — the fan-out will bump it, but in-flight work may need a manual bump.
+- **No `platform-clients` / `gibson` / closed-module imports.** This is the Apache execution layer; it builds against the public `sdk` + community libs only. Transport, observability, and readiness helpers live under `internal/`. A new ELv2/closed dependency would break the license boundary — keep it out.
 - **Tool ABI sentinel line.** Output parsing depends on the exact prefix `===GIBSON_TOOL_OUTPUT===`; do not alter it without updating the daemon catalog.
 - **Adding a parser**: create `parsers/<tool>/<tool>.go`, implement `registry.Parser`, register in `init()`, add `testdata/` golden files, add a blank import in `cmd/gibson-runner/main.go`, add the apt/go/pip install step to `Dockerfile`.
 

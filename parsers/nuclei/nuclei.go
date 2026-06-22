@@ -1,3 +1,17 @@
+// Copyright 2026 zero-day.ai
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 // Package nuclei implements a Gibson tool-runner parser wrapping
 // ProjectDiscovery's nuclei template-based vulnerability scanner. It runs
 // `nuclei -jsonl` (one JSON object per finding) and maps each line to a
@@ -59,22 +73,22 @@ func (p *parser) OutputMessage() proto.Message { return nil }
 // emits many fields; we decode what feeds a Finding and preserve raw output
 // in stdout for operators.
 type nucleiEvent struct {
-	TemplateID   string   `json:"template-id"`
-	Info         nucleiInfo `json:"info"`
-	Host         string   `json:"host"`
-	MatchedAt    string   `json:"matched-at"`
-	Type         string   `json:"type"`
-	CurlCommand  string   `json:"curl-command"`
-	ExtractedResults []string `json:"extracted-results"`
+	TemplateID       string     `json:"template-id"`
+	Info             nucleiInfo `json:"info"`
+	Host             string     `json:"host"`
+	MatchedAt        string     `json:"matched-at"`
+	Type             string     `json:"type"`
+	CurlCommand      string     `json:"curl-command"`
+	ExtractedResults []string   `json:"extracted-results"`
 }
 
 type nucleiInfo struct {
-	Name           string            `json:"name"`
-	Description    string            `json:"description"`
-	Severity       string            `json:"severity"`
-	Remediation    string            `json:"remediation"`
+	Name           string               `json:"name"`
+	Description    string               `json:"description"`
+	Severity       string               `json:"severity"`
+	Remediation    string               `json:"remediation"`
 	Classification nucleiClassification `json:"classification"`
-	Tags           []string `json:"tags"`
+	Tags           []string             `json:"tags"`
 }
 
 type nucleiClassification struct {
