@@ -1,3 +1,17 @@
+// Copyright 2026 zero-day.ai
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 // Package registry is the central map of parsers registered in the runner
 // binary. Each parser file under parsers/ registers itself here via init(),
 // so adding a parser is a single-file change: create parsers/<tool>/<tool>.go
@@ -53,15 +67,15 @@ const (
 // the runner's --list-tools command collects these and prints them as a JSON
 // array that the Gibson daemon's catalog refresher ingests.
 type CatalogEntry struct {
-	Name                  string            `json:"name"`
-	Version               string            `json:"version"`
-	Description           string            `json:"description"`
-	Tags                  []string           `json:"tags"`
-	InputSchema           map[string]any    `json:"input_schema"`
-	OutputProtoType       string            `json:"output_proto_type"`
-	DefaultParseQuality   ParseQuality      `json:"default_parse_quality"`
-	Resources             ResourceHint      `json:"resources"`
-	DefaultTimeoutSeconds int32             `json:"default_timeout_seconds"`
+	Name                  string         `json:"name"`
+	Version               string         `json:"version"`
+	Description           string         `json:"description"`
+	Tags                  []string       `json:"tags"`
+	InputSchema           map[string]any `json:"input_schema"`
+	OutputProtoType       string         `json:"output_proto_type"`
+	DefaultParseQuality   ParseQuality   `json:"default_parse_quality"`
+	Resources             ResourceHint   `json:"resources"`
+	DefaultTimeoutSeconds int32          `json:"default_timeout_seconds"`
 }
 
 // ResourceHint is a per-tool suggested sandbox size. Operators can override
@@ -90,10 +104,10 @@ type Parser interface {
 }
 
 var (
-	mu        sync.RWMutex
-	parsers   = map[string]Parser{}
-	registry  []Parser
-	policies  = map[string]policy.ArgsPolicy{}
+	mu       sync.RWMutex
+	parsers  = map[string]Parser{}
+	registry []Parser
+	policies = map[string]policy.ArgsPolicy{}
 )
 
 // Register records a parser in the global table. Panics if the name is
