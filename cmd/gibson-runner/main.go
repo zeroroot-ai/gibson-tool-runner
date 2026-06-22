@@ -43,8 +43,8 @@ import (
 
 	"github.com/zeroroot-ai/gibson-tool-runner/internal/probes"
 	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
-	"github.com/zeroroot-ai/platform-clients/observability"
-	"github.com/zeroroot-ai/platform-clients/readiness"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/observability"
+	"github.com/zeroroot-ai/gibson-tool-runner/internal/readiness"
 
 	// Blank-import every parser package so its init() registers with the
 	// central parser registry. The list grows as parsers land.
