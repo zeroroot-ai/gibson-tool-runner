@@ -26,8 +26,7 @@ jobs:
       id-token: write
       attestations: write
       security-events: write
-    secrets:
-      ghtoken: ${{ secrets.GH_PAT_GIBSON_RO }}
+      actions: read
     with:
       component_name: gibson-executor
       component_path: .
@@ -46,8 +45,7 @@ jobs:
       id-token: write
       attestations: write
       security-events: write
-    secrets:
-      ghtoken: ${{ secrets.GH_PAT_GIBSON_RO }}
+      actions: read
     with:
       component_name: gibson-mcp-bridge-runner
       component_path: .
