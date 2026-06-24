@@ -1,4 +1,4 @@
-# forbidden-patterns.md — `zeroroot-ai/gibson-tool-runner`
+# forbidden-patterns.md — `zeroroot-ai/gibson-executor`
 
 Companion to [`rules.yaml`](./rules.yaml). Wrong vs right code shapes
 for the tool runner. Spec: `unified-identity-and-authorization`.
@@ -80,7 +80,7 @@ module's pin.
 Wrong (replicates the wiring inline, splitting credential handling):
 
 ```go
-// cmd/gibson-tool-runner/main.go
+// cmd/gibson-runner/main.go
 import oauth2cc "golang.org/x/oauth2/clientcredentials"
 
 func main() {

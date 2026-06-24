@@ -1,4 +1,4 @@
-# gibson-tool-runner — CLAUDE.md
+# gibson-executor — CLAUDE.md
 
 > **Workflow rules:** see [`zeroroot-ai/.github` → `AGENTS.md`](https://github.com/zeroroot-ai/.github/blob/main/AGENTS.md) — canonical for branching / commits / PRs / releases / merging. Conventional Commits MANDATORY. Never push to main. Never force-push.
 
@@ -34,6 +34,6 @@ make list-tools     # run bin/gibson-runner --list-tools
 
 - Org-level workflow: [`AGENTS.md`](https://github.com/zeroroot-ai/.github/blob/main/AGENTS.md)
 - Workspace map: workspace `CLAUDE.md`
-- Per-repo ADRs: [`docs/repos/gibson-tool-runner/adr/`](https://github.com/zeroroot-ai/docs/tree/main/repos/gibson-tool-runner/adr)
+- Per-repo ADRs: [`docs/repos/gibson-executor/adr/`](https://github.com/zeroroot-ai/docs/tree/main/repos/gibson-executor/adr)
 - Domain glossary: [`docs/glossary.md`](https://github.com/zeroroot-ai/docs/blob/main/glossary.md)
 - PR checklist: [`docs/agents/pr-checklist.md`](https://github.com/zeroroot-ai/docs/blob/main/agents/pr-checklist.md)

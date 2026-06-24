@@ -17,8 +17,8 @@ package subfinder
 import (
 	"testing"
 
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/policy"
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
+	"github.com/zeroroot-ai/gibson-executor/internal/policy"
+	"github.com/zeroroot-ai/gibson-executor/internal/registry"
 )
 
 func TestPolicy_DropsOutputFlag(t *testing.T) {

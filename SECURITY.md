@@ -1,6 +1,6 @@
-# Security model — gibson-tool-runner
+# Security model — gibson-executor
 
-This document describes the security boundaries of `gibson-tool-runner`
+This document describes the security boundaries of `gibson-executor`
 and the per-tool args allowlist that protects long-running CLI tools
 (nmap, nuclei, masscan, …) from caller-controlled flag injection.
 

@@ -28,8 +28,8 @@ import (
 	graphragpb "github.com/zeroroot-ai/sdk/api/gen/gibson/graphrag/v1"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/sandbox"
+	"github.com/zeroroot-ai/gibson-executor/internal/registry"
+	"github.com/zeroroot-ai/gibson-executor/internal/sandbox"
 )
 
 const (

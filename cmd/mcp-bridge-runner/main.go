@@ -34,7 +34,7 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/bridgerunner"
+	"github.com/zeroroot-ai/gibson-executor/internal/bridgerunner"
 	"github.com/zeroroot-ai/sdk/mcpbridge"
 )
 

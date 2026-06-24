@@ -26,8 +26,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/policy"
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
+	"github.com/zeroroot-ai/gibson-executor/internal/policy"
+	"github.com/zeroroot-ai/gibson-executor/internal/registry"
 )
 
 // noNewlines rejects values containing '\n' / '\r' (HTTP request smuggling

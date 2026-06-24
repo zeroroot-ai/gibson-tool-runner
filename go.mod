@@ -1,4 +1,4 @@
-module github.com/zeroroot-ai/gibson-tool-runner
+module github.com/zeroroot-ai/gibson-executor
 
 go 1.25.11
 

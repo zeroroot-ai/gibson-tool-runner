@@ -55,21 +55,21 @@ import (
 	graphragpb "github.com/zeroroot-ai/sdk/api/gen/gibson/graphrag/v1"
 	"google.golang.org/protobuf/encoding/protojson"
 
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/observability"
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/probes"
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/readiness"
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
+	"github.com/zeroroot-ai/gibson-executor/internal/observability"
+	"github.com/zeroroot-ai/gibson-executor/internal/probes"
+	"github.com/zeroroot-ai/gibson-executor/internal/readiness"
+	"github.com/zeroroot-ai/gibson-executor/internal/registry"
 
 	// Blank-import every parser package so its init() registers with the
 	// central parser registry. The list grows as parsers land.
-	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/amass"
-	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/dnsx"
-	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/httpx"
-	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/masscan"
-	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/naabu"
-	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/nmap"
-	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/nuclei"
-	_ "github.com/zeroroot-ai/gibson-tool-runner/parsers/subfinder"
+	_ "github.com/zeroroot-ai/gibson-executor/parsers/amass"
+	_ "github.com/zeroroot-ai/gibson-executor/parsers/dnsx"
+	_ "github.com/zeroroot-ai/gibson-executor/parsers/httpx"
+	_ "github.com/zeroroot-ai/gibson-executor/parsers/masscan"
+	_ "github.com/zeroroot-ai/gibson-executor/parsers/naabu"
+	_ "github.com/zeroroot-ai/gibson-executor/parsers/nmap"
+	_ "github.com/zeroroot-ai/gibson-executor/parsers/nuclei"
+	_ "github.com/zeroroot-ai/gibson-executor/parsers/subfinder"
 )
 
 const (
@@ -82,7 +82,7 @@ const (
 	envHealthAddr = "RUNNER_HEALTH_ADDR"
 
 	// serviceName is the OTel service.name attribute for this binary.
-	serviceName = "gibson-tool-runner"
+	serviceName = "gibson-executor"
 
 	exitOK                = 0
 	exitInputParse        = 1
@@ -137,7 +137,7 @@ func runServe() {
 	}
 
 	logger := otelProvider.Logger
-	logger.Info("gibson-tool-runner starting", "mode", "serve")
+	logger.Info("gibson-executor starting", "mode", "serve")
 
 	// Readiness aggregator — daemon-callback reachability probe.
 	agg := readiness.NewAggregator()
