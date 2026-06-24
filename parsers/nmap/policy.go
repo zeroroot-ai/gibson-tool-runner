@@ -24,8 +24,8 @@
 package nmap
 
 import (
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/policy"
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
+	"github.com/zeroroot-ai/gibson-executor/internal/policy"
+	"github.com/zeroroot-ai/gibson-executor/internal/registry"
 )
 
 // argsPolicy enumerates safe nmap CLI flags. Add new entries only after

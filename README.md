@@ -1,4 +1,4 @@
-# gibson-tool-runner
+# gibson-executor
 
 > **Workflow rules:** see [`zeroroot-ai/.github` → `AGENTS.md`](https://github.com/zeroroot-ai/.github/blob/main/AGENTS.md) for branch / PR / commit / release / rebase rules.
 
@@ -14,7 +14,7 @@ standard tool-runner ABI.
 
 Early scaffold. v0.1.0 will ship the first three parsers (nmap, httpx,
 nuclei). The daemon-side catalog refresher + removal of the Helm
-`sandbox.tools.*` block lands as part of the `gibson-tool-runner` spec in
+`sandbox.tools.*` block lands as part of the `gibson-executor` spec in
 the main zeroroot-ai repo.
 
 ## Tool-runner ABI

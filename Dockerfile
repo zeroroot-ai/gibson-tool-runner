@@ -1,15 +1,15 @@
 # syntax=docker/dockerfile:1.7
-# gibson-tool-runner — one image hosting every CLI parser compiled into the
+# gibson-executor — one image hosting every CLI parser compiled into the
 # Go binary. The image ships on debian:trixie-slim (not Kali) and installs
 # only the tools the registered parsers exec. Adding a tool means one new
 # apt/curl/go-install line here + a parser file in ./parsers/.
 #
 # Build:
-#   docker build -t ghcr.io/zeroroot-ai/gibson-tool-runner:<tag> .
+#   docker build -t ghcr.io/zeroroot-ai/gibson-executor:<tag> .
 #
 # Run (smoke):
 #   docker run --rm -e GIBSON_TOOL_INPUT_B64=... -e GIBSON_TOOL_NAME=nmap \
-#     ghcr.io/zeroroot-ai/gibson-tool-runner:<tag>
+#     ghcr.io/zeroroot-ai/gibson-executor:<tag>
 
 # Pin the runtime base by digest in production releases. :trixie-slim is
 # fine for dev iteration; CI overrides via --build-arg BASE=debian@sha256:...

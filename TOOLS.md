@@ -1,12 +1,13 @@
 # Tool backlog
 
-Curated list of CLI tools worth adding as parsers to `gibson-tool-runner`.
+Curated list of CLI tools worth adding as parsers to `gibson-executor`.
 Ordered by category, with a rough priority (🟢 first, 🟡 second, 🔵 long tail)
 and a note on the expected DiscoveryResult shape.
 
 Adding a tool = one parser file under `parsers/<tool>/`, one apt/curl line
-in the Dockerfile, one blank-import in `cmd/gibson-runner/main.go`,
-one golden fixture. Pattern is established; most take <200 LOC.
+in the Dockerfile, one blank-import in `cmd/gibson-runner/main.go` (binary
+name is unchanged — see README), one golden fixture. Pattern is established;
+most take <200 LOC.
 
 ## Shipping today (v0.1)
 

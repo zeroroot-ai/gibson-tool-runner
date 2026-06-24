@@ -2,6 +2,7 @@ name: release
 
 # Publishes the --list-tools OCI catalog artifact on tag push.
 # Image build has moved to image.yml (org reusable, slice 1.2, .github#47).
+# Catalog artifact: ghcr.io/zeroroot-ai/gibson-executor-catalog
 
 on:
   push:
@@ -60,8 +61,8 @@ jobs:
           curl -fsSL -o /tmp/oras.tar.gz "https://github.com/oras-project/oras/releases/download/v${ORAS_VERSION}/oras_${ORAS_VERSION}_linux_amd64.tar.gz"
           tar -xzf /tmp/oras.tar.gz -C /usr/local/bin oras
           oras push \
-              "ghcr.io/zeroroot-ai/gibson-tool-runner-catalog:${{ steps.tags.outputs.semver }}" \
-              --artifact-type application/vnd.gibson.tool-runner.catalog.v1+json \
+              "ghcr.io/zeroroot-ai/gibson-executor-catalog:${{ steps.tags.outputs.semver }}" \
+              --artifact-type application/vnd.gibson.executor.catalog.v1+json \
               /tmp/catalog.json:application/json
 
       - name: release notes — parser catalog snapshot

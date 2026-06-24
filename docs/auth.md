@@ -1,4 +1,4 @@
-# auth.md — `zeroroot-ai/gibson-tool-runner`
+# auth.md — `zeroroot-ai/gibson-executor`
 
 Auth model from the tool runner's perspective. AI-agent-facing.
 Spec: `unified-identity-and-authorization` Requirements 12.1–12.3.

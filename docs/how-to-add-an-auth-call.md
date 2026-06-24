@@ -1,4 +1,4 @@
-# how-to-add-an-auth-call.md — `zeroroot-ai/gibson-tool-runner`
+# how-to-add-an-auth-call.md — `zeroroot-ai/gibson-executor`
 
 The tool runner does not own RPCs — it consumes
 `gibson.component.v1.ComponentService` from the daemon. "Adding an
@@ -18,7 +18,7 @@ first if you have not.
 it; do not stand up a second one.
 
 ```go
-// cmd/gibson-tool-runner/main.go
+// cmd/gibson-runner/main.go
 
 func main() {
     ctx := context.Background()

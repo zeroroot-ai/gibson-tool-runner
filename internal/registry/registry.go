@@ -28,7 +28,7 @@ import (
 	graphragpb "github.com/zeroroot-ai/sdk/api/gen/gibson/graphrag/v1"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/policy"
+	"github.com/zeroroot-ai/gibson-executor/internal/policy"
 )
 
 // ExecuteRequest is the typed input every parser receives. Callers build it

@@ -1,4 +1,4 @@
-# gibson-tool-runner — one microVM image, one Go binary, N parsers.
+# gibson-executor — one microVM image, one Go binary, N parsers.
 #
 # Targets:
 #   make build      Org-contract alias for bin (gibson#171 slice 1.4)
@@ -14,7 +14,7 @@ SHELL := /usr/bin/env bash
 .SHELLFLAGS := -eo pipefail -c
 
 BIN_DIR := bin
-IMAGE   ?= ghcr.io/zeroroot-ai/gibson-tool-runner:dev
+IMAGE   ?= ghcr.io/zeroroot-ai/gibson-executor:dev
 BRIDGE_IMAGE ?= ghcr.io/zeroroot-ai/gibson-mcp-bridge-runner:dev
 
 .PHONY: help

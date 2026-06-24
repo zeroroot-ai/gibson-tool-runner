@@ -26,7 +26,7 @@ import (
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
+	"github.com/zeroroot-ai/gibson-executor/internal/registry"
 )
 
 // TestDecodeInputJSON_Fields asserts that decodeInputJSON correctly maps the

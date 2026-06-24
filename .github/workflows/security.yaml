@@ -1,5 +1,5 @@
 # Spec: security-hardening Requirement 5 (Go-CVE policy).
-# Runs govulncheck against the gibson-tool-runner on every PR and on
+# Runs govulncheck against gibson-executor on every PR and on
 # every push to main. Local invocation is forbidden per CLAUDE.md
 # (CPU thrash); this workflow is the canonical place to surface CVE failures.
 name: security

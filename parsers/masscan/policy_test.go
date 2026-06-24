@@ -17,8 +17,8 @@ package masscan
 import (
 	"testing"
 
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/policy"
-	"github.com/zeroroot-ai/gibson-tool-runner/internal/registry"
+	"github.com/zeroroot-ai/gibson-executor/internal/policy"
+	"github.com/zeroroot-ai/gibson-executor/internal/registry"
 )
 
 // TestPolicy_DropsOutputFile asserts the canonical injection

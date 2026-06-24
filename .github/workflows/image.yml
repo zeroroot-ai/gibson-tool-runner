@@ -1,6 +1,6 @@
 name: image
 
-# Builds + pushes ghcr.io/zeroroot-ai/gibson-tool-runner to GHCR.
+# Builds + pushes ghcr.io/zeroroot-ai/gibson-executor to GHCR.
 # Adopts the org reusable image-build workflow (slice 1.2, .github#47).
 #
 # The catalog OCI artifact (--list-tools) is published separately by release.yml.
@@ -29,10 +29,10 @@ jobs:
     secrets:
       ghtoken: ${{ secrets.GH_PAT_GIBSON_RO }}
     with:
-      component_name: gibson-tool-runner
+      component_name: gibson-executor
       component_path: .
       dockerfile_path: Dockerfile
-      image_name: ghcr.io/zeroroot-ai/gibson-tool-runner
+      image_name: ghcr.io/zeroroot-ai/gibson-executor
       tag_pattern: v(.*)
 
   # MCP-bridge runner — the generic connector host image (ADR-0048 Option 1).
