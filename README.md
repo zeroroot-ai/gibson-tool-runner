@@ -4,6 +4,8 @@
 
 One microVM image. One Go binary. N parsers for CLI security + ops tools.
 
+The in-guest execution agent for [zeroroot.ai](https://zeroroot.ai), the zero-trust agent factory, run inside Setec microVMs by Gibson.
+
 The Gibson daemon dispatches every sandboxed tool call into a Setec microVM
 running this image. The binary reads a typed proto request from an env var,
 shells out to the installed CLI, parses the output into taxonomy-aligned
