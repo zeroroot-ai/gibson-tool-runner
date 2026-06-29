@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.107.0](https://github.com/zeroroot-ai/gibson-executor/compare/v0.106.1...v0.107.0) (2026-06-29)
+
+
+### Features
+
+* add gibson-mcp-bridge-runner image for hosted connectors ([#86](https://github.com/zeroroot-ai/gibson-executor/issues/86)) ([75ea9bf](https://github.com/zeroroot-ai/gibson-executor/commit/75ea9bf2f6e9aa8f743f8cb4c58f13b91aff1f75))
+* **mcp-bridge-runner:** consume the runtime: mcp-bridge plugin manifest ([#94](https://github.com/zeroroot-ai/gibson-executor/issues/94)) ([7f6b54e](https://github.com/zeroroot-ai/gibson-executor/commit/7f6b54eac6354609afb37fa828e0fe3baf171d3e))
+* rename module and image to gibson-executor (Apache open-core E5) ([#113](https://github.com/zeroroot-ai/gibson-executor/issues/113)) ([22e2dcb](https://github.com/zeroroot-ai/gibson-executor/commit/22e2dcb48ac27ae5be064e4100b99ede530ab31d))
+* sever platform-clients dependency from gibson-tool-runner ([#108](https://github.com/zeroroot-ai/gibson-executor/issues/108)) ([3a5c545](https://github.com/zeroroot-ai/gibson-executor/commit/3a5c545e41cc236f473262ecc34a6b5bfd0c857e)), closes [#98](https://github.com/zeroroot-ai/gibson-executor/issues/98)
+
+
+### Bug Fixes
+
+* **ci:** align image.yml with the working reusable-image-build caller ([#114](https://github.com/zeroroot-ai/gibson-executor/issues/114)) ([3301a34](https://github.com/zeroroot-ai/gibson-executor/commit/3301a34f0bfe117538e5954fdf1790914292a393))
+* **ci:** bump go toolchain to 1.25.11 ([#78](https://github.com/zeroroot-ai/gibson-executor/issues/78)) ([7230e91](https://github.com/zeroroot-ai/gibson-executor/commit/7230e915b6c63758ff19c68a2b2fa36d2024b2a9))
+* **deps:** update first-party deps to post-rename module path versions ([#64](https://github.com/zeroroot-ai/gibson-executor/issues/64)) ([dd181e5](https://github.com/zeroroot-ai/gibson-executor/commit/dd181e5856450fe7393d9f33f50741f524bc3a9f))
+
 ## [0.106.1](https://github.com/zero-day-ai/gibson-tool-runner/compare/v0.106.0...v0.106.1) (2026-05-24)
 
 
